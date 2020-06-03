@@ -1,6 +1,8 @@
 # RoboND-Home-Service-Robot-Project
 Fifth project of the Robotics Course of Udacity
 
+![](gif/home-service-gif.gif)
+
 ## Prerequisites 
 * make >= 4.1
 * gcc/g++ >= 5.4
