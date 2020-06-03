@@ -54,5 +54,15 @@ In the .sh files in `/RoboND-Home-Service-Robot-Project/shellscripts`, change `/
   ### home_service.sh
   `$ chmod +x home_service.sh`  
   `$ ./home_service.sh`  
-  In Rviz add Marker  
+  In Rviz add Marker
   Watch the robot moving to the initial position, picking the object and delivering it at the goal position
+  
+## Packages
+  ## Mapping 
+  The mapping is made using the gmapping ROS package. This package uses the laser and pose data of the robot to create a 2D occupancy grid map. For more information about the package acess http://wiki.ros.org/gmapping.
+
+  ## Localization
+  The localization is performed with the AMCL ROS package. This package uses the adaptive Monte Carlo localization (AMCL). This package needs a known map. In this project the map was created with the gmapping package. And it uses a particle filter to track the pose in this map. For more information about the package acess http://wiki.ros.org/amcl.
+  
+  ## Navigation
+  The navigation is achieved using the ROS navigation stack. The mapping is performed using the gmapping ROS package. This package uses the Dijkstra's algorithm to create a path for the robot from the current position to the goal position avoiding obstacles. For more information about the package acess http://wiki.ros.org/navigation and the tutorial http://wiki.ros.org/navigation/Tutorials/SendingSimpleGoals.
